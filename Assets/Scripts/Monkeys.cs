@@ -18,9 +18,8 @@ public class DartMonkey : BaseMonkeyCard
     {
         CardName = "Dart Monkey";
         Attack = 1;
-        Heath = 2;
+        Health = 2;
     }
-
     public override void ActivateEffect()
     {
         Debug.Log("dart monkey effect activated");
