@@ -41,18 +41,4 @@ public class IceMonkey : BaseMonkeyCard
     }
 }
 
-public class SniperMonkey : BaseMonkeyCard
-{
-    private void Awake()
-    {
-        CardName = "Sniper Monkey";
-        Attack = 3;
-        Health = 3;
-    }
-
-    public override void ActivateEffect()
-    {
-        Debug.Log("sniper monkey effect activated");
-    }
-}
 
