@@ -11,9 +11,11 @@ public abstract class BaseMilitaryCard : MonoBehaviour
     public int ManaCost;
     public int DecreaseDamage;
     public Sprite CardImage;
+    public TurnSystem turnSystem;
 
-    public BaseMilitaryCard(string name, int attack, int health, int cost, int decrease)
+    public BaseMilitaryCard(TurnSystem turnScript, string name, int attack, int health, int cost, int decrease)
     {
+        this.turnSystem = turnScript;
         this.CardName = name;
         this.Attack = attack;
         this.Health = health;

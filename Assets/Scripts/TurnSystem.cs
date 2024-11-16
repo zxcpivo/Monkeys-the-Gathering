@@ -15,6 +15,9 @@ public class TurnSystem : MonoBehaviour
     public int maxMana;
     public int currentMana;
 
+    public GameObject[] CardDeck;
+    public Transform cardSpawnPoint;
+
     void Start()
     {
         isYourTurn = true;
@@ -44,6 +47,8 @@ public class TurnSystem : MonoBehaviour
     {
         isYourTurn = false;
         OpponentTurn += 1;
+
+        DrawCard();
     }
 
     public void EndOpponentTurn()
@@ -53,5 +58,13 @@ public class TurnSystem : MonoBehaviour
 
         maxMana += 1;
         currentMana = maxMana;
+    }
+
+    public void DrawCard()
+    {
+        int RandomIndex = Random.Range(0, CardDeck.Length);
+
+        Instantiate(CardDeck[RandomIndex], cardSpawnPoint.position, Quaternion.identity);
+
     }
 }
