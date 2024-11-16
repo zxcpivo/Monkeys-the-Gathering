@@ -12,7 +12,6 @@ public class SniperMonkey : BaseMilitaryCard
     public override void ActivateEffect()
     {
         print($"{CardName} effect activated");
-        turnSystem.currentMana -= ManaCost;
-        print(turnSystem.currentMana);
+        turnSystem.YourCurrentMana -= ManaCost;
     }
 }
