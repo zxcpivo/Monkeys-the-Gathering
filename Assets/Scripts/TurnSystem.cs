@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class TurnSystem : MonoBehaviour
 {
-
     public bool isYourTurn;
     public int YourCardsInHand;
     public int OpponentsCardsInHand;
