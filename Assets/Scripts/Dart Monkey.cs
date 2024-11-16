@@ -8,6 +8,6 @@ public class DartMonkey : BasePrimaryCard
 
     public override void ActivateEffect()
     {
-
+                
     }
 }

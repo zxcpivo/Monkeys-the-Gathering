@@ -2,17 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IceMonkey : MonoBehaviour
+public class IceMonkey : BasePrimaryCard
 {
-    // Start is called before the first frame update
-    void Start()
+    public int FreezeTime;
+
+    public IceMonkey(TurnSystem turnScript, string name, int attack, int health, int cost, int freezeTime) : base(turnScript, name, attack, health, cost)
     {
-        
+        this.FreezeTime = freezeTime;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
