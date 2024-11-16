@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7493474074287288824}
   - component: {fileID: 3190220862734878383}
+  - component: {fileID: -3699622230561968304}
   m_Layer: 0
   m_Name: Ice Monkey Prototype
   m_TagString: Untagged
@@ -84,3 +85,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-3699622230561968304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3836601029837280897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cc317ed78a02ad4b88bbb2f2273654d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

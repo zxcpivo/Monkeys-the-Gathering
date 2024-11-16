@@ -2,43 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class BaseMonkeyCard : MonoBehaviour
+public abstract class BasePrimaryCard : MonoBehaviour
 {
     public string CardName;
     public int Attack;
     public int Health;
+    public int ManaCost;
     public Sprite CardImage;
+    public TurnSystem turnSystem;
+
+    public BasePrimaryCard(TurnSystem turnScript, string name, int attack, int health, int cost)
+    {
+        this.turnSystem = turnScript;
+        this.CardName = name;
+        this.Attack = attack;
+        this.Health = health;
+        this.ManaCost = cost;
+    }
 
     public abstract void ActivateEffect();
 }
-
-public class DartMonkey : BaseMonkeyCard
-{
-    private void Awake()
-    {
-        CardName = "Dart Monkey";
-        Attack = 1;
-        Health = 2;
-    }
-    public override void ActivateEffect()
-    {
-        Debug.Log("dart monkey effect activated");
-    }
-}
-
-public class IceMonkey : BaseMonkeyCard
-{
-    private void Awake()
-    {
-        CardName = "Ice Monkey";
-        Attack = 1;
-        Health = 2;
-    }
-
-    public override void ActivateEffect() 
-    {
-        Debug.Log("ice monkey effect activated");
-    }
-}
-
 
