@@ -12,8 +12,6 @@ public class SniperMonkey : BaseMilitaryCard
     public override void ActivateEffect()
     {
         print($"{CardName} effect activated");
-        if (turnScript == null)
-            Debug.LogError("someObject is null!");
-        print(turnScript.maxMana);
+        turnScript.YourCurrentMana -= ManaCost;
     }
 }
