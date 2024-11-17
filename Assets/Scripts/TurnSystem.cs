@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -53,6 +54,12 @@ public class TurnSystem : MonoBehaviour
 
     public void EndYourTurn()
     {
+        if (!isYourTurn) 
+        {
+            Console.WriteLine("cant end your turn because its the opponents turn");
+            return;
+        }
+
         isYourTurn = false;
         OpponentTurn += 1;
 
@@ -64,6 +71,12 @@ public class TurnSystem : MonoBehaviour
 
     public void EndOpponentTurn()
     {
+        if (isYourTurn)
+        {
+            Console.WriteLine(" opponent cant end the turn because its your turn");
+            return;
+        }
+
         isYourTurn = true;
         YourTurn += 1;
 
@@ -76,7 +89,7 @@ public class TurnSystem : MonoBehaviour
 
     public void YouDrawCard(int InHand)
     {
-        int RandomIndex = Random.Range(0, CardDeck.Length);
+        int RandomIndex = UnityEngine.Random.Range(0, CardDeck.Length);
         if (InHand == 0)
         {
             cardSpawnPoint.position = new Vector3(-0.5f, -4f, 0f);
@@ -99,7 +112,7 @@ public class TurnSystem : MonoBehaviour
 
     public void OpponentDrawCard(int InHand)
     {
-        int RandomIndex = Random.Range(0, CardDeck.Length);
+        int RandomIndex = UnityEngine.Random.Range(0, CardDeck.Length);
         if (InHand == 0)
         {
             cardSpawnPoint.position = new Vector3(-0.5f, 3.5f, 0f);
