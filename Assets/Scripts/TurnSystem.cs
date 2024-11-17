@@ -20,7 +20,7 @@ public class TurnSystem : MonoBehaviour
     public GameObject[] CardDeck;
     public Transform cardSpawnPoint;
 
-    void Start()
+    public void Awake()
     {
         isYourTurn = true;
         YourTurn = 1;
@@ -35,15 +35,17 @@ public class TurnSystem : MonoBehaviour
 
     void Update()
     {
-        if(isYourTurn == true)
+        if (isYourTurn == true)
         {
             turnText.text = "Your Turn";
             manaText.text = YourCurrentMana + "/" + maxMana;
+            print(maxMana);
         }
         else
         {
             turnText.text = "Opponent Turn";
             manaText.text = OpponentCurrentMana + "/" + maxMana;
+            print(maxMana);
         }
 
 

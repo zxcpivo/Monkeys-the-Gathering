@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class SniperMonkey : BaseMilitaryCard
 {
-
-    public SniperMonkey(TurnSystem turnScript, string name, int attack, int health, int cost, int decrease) : base(turnScript, name, attack, health, cost, decrease)
+    public TurnSystem turnScript;
+    public SniperMonkey(string name, int attack, int health, int cost, int decrease) : base(name, attack, health, cost, decrease)
     {
 
     }
     public override void ActivateEffect()
     {
         print($"{CardName} effect activated");
-        print(turnSystem.maxMana);
+        print(turnScript.maxMana);
     }
 }

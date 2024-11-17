@@ -103,4 +103,4 @@ MonoBehaviour:
   ManaCost: 3
   DecreaseDamage: 1
   CardImage: {fileID: 21300000, guid: 136b3f9dc5d29ca4cbb8bb2cf32f1040, type: 3}
-  turnSystem: {fileID: 0}
+  turnScript: {fileID: 0}
