@@ -25,3 +25,4 @@ public abstract class BaseMilitaryCard : MonoBehaviour
     public abstract void ActivateEffect();
 }
 
+
