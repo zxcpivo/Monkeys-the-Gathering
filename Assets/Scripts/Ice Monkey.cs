@@ -11,5 +11,8 @@ public class IceMonkey : BasePrimaryCard
         this.FreezeTime = freezeTime;
     }
 
+    public override void ActivateEffect()
+    {
 
+    }
 }

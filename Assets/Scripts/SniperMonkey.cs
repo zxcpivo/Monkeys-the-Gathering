@@ -12,5 +12,6 @@ public class SniperMonkey : BaseMilitaryCard
     public override void ActivateEffect()
     {
         print($"{CardName} effect activated");
+        print(turnSystem.maxMana);
     }
 }
