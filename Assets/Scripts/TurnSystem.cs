@@ -98,6 +98,12 @@ public class TurnSystem : MonoBehaviour
             Vector3 buttonOffset = new Vector3(-81f, -500f, 0f);
             Button button = Instantiate(playCard, buttonOffset, Quaternion.identity);
             button.transform.SetParent(canvas.transform, false);
+
+            button.onClick.AddListener(() =>
+            {
+                card.transform.position = new Vector3(-20f, -15.5f, 0f);
+                Destroy(button.gameObject);
+            });
         }
         else if (InHand == 1)
         {
@@ -107,6 +113,12 @@ public class TurnSystem : MonoBehaviour
             Vector3 buttonOffset = new Vector3(127f, -500f, 0f);
             Button button = Instantiate(playCard, buttonOffset, Quaternion.identity);
             button.transform.SetParent(canvas.transform, false);
+
+            button.onClick.AddListener(() =>
+            {
+                card.transform.position = new Vector3(10f, -15.5f, 0f);
+                Destroy(button.gameObject);
+            });
         }
         else if (InHand == 2)
         {
@@ -116,6 +128,12 @@ public class TurnSystem : MonoBehaviour
             Vector3 buttonOffset = new Vector3(340f, -500f, 0f);
             Button button = Instantiate(playCard, buttonOffset, Quaternion.identity);
             button.transform.SetParent(canvas.transform, false);
+
+            button.onClick.AddListener(() =>
+            {
+                card.transform.position = new Vector3(40f, -15.5f, 0f);
+                Destroy(button.gameObject);
+            });
         }
         else
         {
@@ -135,6 +153,12 @@ public class TurnSystem : MonoBehaviour
             Vector3 buttonOffset = new Vector3(-81f, 288f, 0f);
             Button button = Instantiate(playCard, buttonOffset, Quaternion.identity);
             button.transform.SetParent(canvas.transform, false);
+
+            button.onClick.AddListener(() =>
+            {
+                card.transform.position = new Vector3(-20f, 15.5f, 0f);
+                Destroy(button.gameObject);
+            });
         }
         else if (InHand == 1)
         {
@@ -144,6 +168,12 @@ public class TurnSystem : MonoBehaviour
             Vector3 buttonOffset = new Vector3(127f, 288f, 0f);
             Button button = Instantiate(playCard, buttonOffset, Quaternion.identity);
             button.transform.SetParent(canvas.transform, false);
+
+            button.onClick.AddListener(() =>
+            {
+                card.transform.position = new Vector3(10f, 15.5f, 0f);
+                Destroy(button.gameObject);
+            });
         }
         else if (InHand == 2)
         {
@@ -153,11 +183,22 @@ public class TurnSystem : MonoBehaviour
             Vector3 buttonOffset = new Vector3(340f, 288f, 0f);
             Button button = Instantiate(playCard, buttonOffset, Quaternion.identity);
             button.transform.SetParent(canvas.transform, false);
+
+            button.onClick.AddListener(() =>
+            {
+                card.transform.position = new Vector3(40f, 15.5f, 0f);
+                Destroy(button.gameObject);
+            });
         }
         else
         {
             print("You cant draw anymore cards");
         }
+
+    }
+
+    public void PlaceCard(GameObject card)
+    {
 
     }
 }
