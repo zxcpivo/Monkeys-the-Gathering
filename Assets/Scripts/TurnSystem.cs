@@ -91,19 +91,19 @@ public class TurnSystem : MonoBehaviour
         int RandomIndex = UnityEngine.Random.Range(0, CardDeck.Length);
         if (InHand == 0)
         {
-            cardSpawnPoint.position = new Vector3(-35f, -47f, 0f);
+            cardSpawnPoint.position = new Vector3(-10f, -47f, 0f);
         }
         else if (InHand == 1)
         {
-            cardSpawnPoint.position = new Vector3(-10f, -47f, 0f);
+            cardSpawnPoint.position = new Vector3(15f, -47f, 0f);
         }
         else if (InHand == 2)
         {
-            cardSpawnPoint.position = new Vector3(15f, -47f, 0f);
-        }
-        else if (InHand == 3)
-        {
             cardSpawnPoint.position = new Vector3(40f, -47f, 0f);
+        }
+        else
+        {
+            print("You cant draw anymore cards");
         }
         GameObject card = Instantiate(CardDeck[RandomIndex], cardSpawnPoint.position, Quaternion.identity);
 
@@ -119,21 +119,22 @@ public class TurnSystem : MonoBehaviour
         int RandomIndex = UnityEngine.Random.Range(0, CardDeck.Length);
         if (InHand == 0)
         {
-            cardSpawnPoint.position = new Vector3(-35f, 47f, 0f);
+            cardSpawnPoint.position = new Vector3(-10f, 47f, 0f);
         }
         else if (InHand == 1)
         {
-            cardSpawnPoint.position = new Vector3(-10f, 47f, 0f);
+            cardSpawnPoint.position = new Vector3(15f, 47f, 0f);
         }
         else if (InHand == 2)
         {
-            cardSpawnPoint.position = new Vector3(15f, 47f, 0f);
-        }
-        else if (InHand == 3)
-        {
             cardSpawnPoint.position = new Vector3(40f, 47f, 0f);
         }
-        Instantiate(CardDeck[RandomIndex], cardSpawnPoint.position, Quaternion.identity);
+        else
+        {
+            print("You cant draw anymore cards");
+        }
+
+        GameObject card = Instantiate(CardDeck[RandomIndex], cardSpawnPoint.position, Quaternion.identity);
 
     }
 }
