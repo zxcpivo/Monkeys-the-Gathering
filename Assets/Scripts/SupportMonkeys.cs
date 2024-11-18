@@ -9,11 +9,9 @@ public abstract class BaseSupportCard : MonoBehaviour
     public int Health;
     public int ManaCost;
     public Sprite CardImage;
-    public TurnSystem turnSystem;
     
-    public BaseSupportCard(TurnSystem turnScript, string name, int attack, int health, int cost)
+    public BaseSupportCard(string name, int attack, int health, int cost)
     {
-        this.turnSystem = turnScript;
         this.CardName = name;
         this.Attack = attack;
         this.Health = health;
