@@ -13,7 +13,8 @@ public class TurnSystem : MonoBehaviour
     public int OpponentTurn;
     public Text turnText;
     public Text manaText;
-    public Button attackButton;
+    public Button playCard;
+    public Canvas canvas;
 
     public int maxMana;
     public int YourCurrentMana;
@@ -107,10 +108,10 @@ public class TurnSystem : MonoBehaviour
         }
         GameObject card = Instantiate(CardDeck[RandomIndex], cardSpawnPoint.position, Quaternion.identity);
 
-        //Vector3 buttonOffset = new Vector3(-35f, -47f, 0f);
-        //Button button = Instantiate(attackButton, cardSpawnPoint.position + buttonOffset, Quaternion.identity);
+        Vector3 buttonOffset = new Vector3(800f, 130f, 0f);
+        Button button = Instantiate(playCard, buttonOffset, Quaternion.identity);
 
-        //button.transform.SetParent(card.transform, true);
+        button.transform.SetParent(canvas.transform, false);
 
     }
 
