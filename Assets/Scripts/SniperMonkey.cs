@@ -10,6 +10,13 @@ public class SniperMonkey : BaseMilitaryCard
     {
 
     }
+
+    public override void PlaceCard()
+    {
+        print("Card Placed");
+    }
+
+
     public override void ActivateEffect()
     {
         print($"{CardName} effect activated");

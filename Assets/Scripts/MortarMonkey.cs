@@ -11,6 +11,11 @@ public class MortarMonkey : BaseMilitaryCard
 
     }
 
+    public override void PlaceCard()
+    {
+        print("hi");
+    }
+
     public override void ActivateEffect()
     {
         print($"{CardName} effect activated");
