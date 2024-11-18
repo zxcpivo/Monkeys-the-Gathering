@@ -91,26 +91,26 @@ public class TurnSystem : MonoBehaviour
         int RandomIndex = UnityEngine.Random.Range(0, CardDeck.Length);
         if (InHand == 0)
         {
-            cardSpawnPoint.position = new Vector3(-0.5f, -4f, 0f);
+            cardSpawnPoint.position = new Vector3(-35f, -47f, 0f);
         }
         else if (InHand == 1)
         {
-            cardSpawnPoint.position = new Vector3(1f, -4f, 0f);
+            cardSpawnPoint.position = new Vector3(-10f, -47f, 0f);
         }
         else if (InHand == 2)
         {
-            cardSpawnPoint.position = new Vector3(2.5f, -4f, 0f);
+            cardSpawnPoint.position = new Vector3(15f, -47f, 0f);
         }
         else if (InHand == 3)
         {
-            cardSpawnPoint.position = new Vector3(4f, -4f, 0f);
+            cardSpawnPoint.position = new Vector3(40f, -47f, 0f);
         }
         GameObject card = Instantiate(CardDeck[RandomIndex], cardSpawnPoint.position, Quaternion.identity);
 
-        Vector3 buttonOffset = new Vector3(-0.5f, -4f, 0);
-        Button button = Instantiate(attackButton, cardSpawnPoint.position + buttonOffset, Quaternion.identity);
+        //Vector3 buttonOffset = new Vector3(-35f, -47f, 0f);
+        //Button button = Instantiate(attackButton, cardSpawnPoint.position + buttonOffset, Quaternion.identity);
 
-        button.transform.SetParent(card.transform, true);
+        //button.transform.SetParent(card.transform, true);
 
     }
 
@@ -119,19 +119,19 @@ public class TurnSystem : MonoBehaviour
         int RandomIndex = UnityEngine.Random.Range(0, CardDeck.Length);
         if (InHand == 0)
         {
-            cardSpawnPoint.position = new Vector3(-0.5f, 3.5f, 0f);
+            cardSpawnPoint.position = new Vector3(-35f, 47f, 0f);
         }
         else if (InHand == 1)
         {
-            cardSpawnPoint.position = new Vector3(1f, 3.5f, 0f);
+            cardSpawnPoint.position = new Vector3(-10f, 47f, 0f);
         }
         else if (InHand == 2)
         {
-            cardSpawnPoint.position = new Vector3(2.5f, 3.5f, 0f);
+            cardSpawnPoint.position = new Vector3(15f, 47f, 0f);
         }
         else if (InHand == 3)
         {
-            cardSpawnPoint.position = new Vector3(4f, 3.5f, 0f);
+            cardSpawnPoint.position = new Vector3(40f, 47f, 0f);
         }
         Instantiate(CardDeck[RandomIndex], cardSpawnPoint.position, Quaternion.identity);
 

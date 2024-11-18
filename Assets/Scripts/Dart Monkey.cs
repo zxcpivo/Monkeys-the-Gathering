@@ -6,7 +6,10 @@ public class DartMonkey : BasePrimaryCard
 {
     public TurnSystem turnScript;
 
-    public DartMonkey(string name, int attack, int health, int cost) : base(name, attack, health, cost) {}
+    public DartMonkey(string name, int attack, int health, int cost) : base(name, attack, health, cost)
+    {
+
+    }
 
     public override void ActivateEffect()
     {

@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.133277, w: 0.9910789}
   m_LocalPosition: {x: -3.97, y: -3.27, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -102,4 +102,4 @@ MonoBehaviour:
   Health: 0
   ManaCost: 0
   CardImage: {fileID: 0}
-  turnSystem: {fileID: 0}
+  turnScript: {fileID: 0}
