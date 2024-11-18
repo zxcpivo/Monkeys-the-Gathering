@@ -93,25 +93,34 @@ public class TurnSystem : MonoBehaviour
         if (InHand == 0)
         {
             cardSpawnPoint.position = new Vector3(-10f, -47f, 0f);
+            GameObject card = Instantiate(CardDeck[RandomIndex], cardSpawnPoint.position, Quaternion.identity);
+
+            Vector3 buttonOffset = new Vector3(-81f, -500f, 0f);
+            Button button = Instantiate(playCard, buttonOffset, Quaternion.identity);
+            button.transform.SetParent(canvas.transform, false);
         }
         else if (InHand == 1)
         {
             cardSpawnPoint.position = new Vector3(15f, -47f, 0f);
+            GameObject card = Instantiate(CardDeck[RandomIndex], cardSpawnPoint.position, Quaternion.identity);
+
+            Vector3 buttonOffset = new Vector3(127f, -500f, 0f);
+            Button button = Instantiate(playCard, buttonOffset, Quaternion.identity);
+            button.transform.SetParent(canvas.transform, false);
         }
         else if (InHand == 2)
         {
             cardSpawnPoint.position = new Vector3(40f, -47f, 0f);
+            GameObject card = Instantiate(CardDeck[RandomIndex], cardSpawnPoint.position, Quaternion.identity);
+
+            Vector3 buttonOffset = new Vector3(340f, -500f, 0f);
+            Button button = Instantiate(playCard, buttonOffset, Quaternion.identity);
+            button.transform.SetParent(canvas.transform, false);
         }
         else
         {
             print("You cant draw anymore cards");
         }
-        GameObject card = Instantiate(CardDeck[RandomIndex], cardSpawnPoint.position, Quaternion.identity);
-
-        Vector3 buttonOffset = new Vector3(800f, 130f, 0f);
-        Button button = Instantiate(playCard, buttonOffset, Quaternion.identity);
-
-        button.transform.SetParent(canvas.transform, false);
 
     }
 
@@ -121,21 +130,34 @@ public class TurnSystem : MonoBehaviour
         if (InHand == 0)
         {
             cardSpawnPoint.position = new Vector3(-10f, 47f, 0f);
+            GameObject card = Instantiate(CardDeck[RandomIndex], cardSpawnPoint.position, Quaternion.identity);
+
+            Vector3 buttonOffset = new Vector3(-81f, 288f, 0f);
+            Button button = Instantiate(playCard, buttonOffset, Quaternion.identity);
+            button.transform.SetParent(canvas.transform, false);
         }
         else if (InHand == 1)
         {
             cardSpawnPoint.position = new Vector3(15f, 47f, 0f);
+            GameObject card = Instantiate(CardDeck[RandomIndex], cardSpawnPoint.position, Quaternion.identity);
+
+            Vector3 buttonOffset = new Vector3(127f, 288f, 0f);
+            Button button = Instantiate(playCard, buttonOffset, Quaternion.identity);
+            button.transform.SetParent(canvas.transform, false);
         }
         else if (InHand == 2)
         {
             cardSpawnPoint.position = new Vector3(40f, 47f, 0f);
+            GameObject card = Instantiate(CardDeck[RandomIndex], cardSpawnPoint.position, Quaternion.identity);
+
+            Vector3 buttonOffset = new Vector3(340f, 288f, 0f);
+            Button button = Instantiate(playCard, buttonOffset, Quaternion.identity);
+            button.transform.SetParent(canvas.transform, false);
         }
         else
         {
             print("You cant draw anymore cards");
         }
-
-        GameObject card = Instantiate(CardDeck[RandomIndex], cardSpawnPoint.position, Quaternion.identity);
 
     }
 }
