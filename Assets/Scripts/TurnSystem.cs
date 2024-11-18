@@ -11,6 +11,9 @@ public class TurnSystem : MonoBehaviour
     public int OpponentsCardsInHand;
     public int YourTurn;
     public int OpponentTurn;
+    public int YourCardsOnBoard;
+    public int OpponentCardsOnBoard;
+
     public Text turnText;
     public Text manaText;
     public Button playCard;
@@ -32,9 +35,12 @@ public class TurnSystem : MonoBehaviour
         maxMana = 1;
         YourCurrentMana = 1;
         OpponentCurrentMana = 1;
+
         YourCardsInHand = 0;
         OpponentsCardsInHand = 0;
-    }
+        YourCardsOnBoard = 0;
+        OpponentCardsOnBoard = 0;
+}
 
     void Update()
     {
@@ -48,8 +54,6 @@ public class TurnSystem : MonoBehaviour
             turnText.text = "Opponent Turn";
             manaText.text = OpponentCurrentMana + "/" + maxMana;
         }
-
-
     }
 
     public void EndYourTurn()
@@ -102,6 +106,7 @@ public class TurnSystem : MonoBehaviour
             button.onClick.AddListener(() =>
             {
                 card.transform.position = new Vector3(-20f, -15.5f, 0f);
+                YourCardsInHand -= 1;
                 Destroy(button.gameObject);
             });
         }
@@ -117,6 +122,7 @@ public class TurnSystem : MonoBehaviour
             button.onClick.AddListener(() =>
             {
                 card.transform.position = new Vector3(10f, -15.5f, 0f);
+                YourCardsInHand -= 1;
                 Destroy(button.gameObject);
             });
         }
@@ -132,6 +138,7 @@ public class TurnSystem : MonoBehaviour
             button.onClick.AddListener(() =>
             {
                 card.transform.position = new Vector3(40f, -15.5f, 0f);
+                YourCardsInHand -= 1;
                 Destroy(button.gameObject);
             });
         }
@@ -157,6 +164,8 @@ public class TurnSystem : MonoBehaviour
             button.onClick.AddListener(() =>
             {
                 card.transform.position = new Vector3(-20f, 15.5f, 0f);
+                YourCardsOnBoard += 1;
+                OpponentsCardsInHand -= 1;
                 Destroy(button.gameObject);
             });
         }
@@ -172,6 +181,7 @@ public class TurnSystem : MonoBehaviour
             button.onClick.AddListener(() =>
             {
                 card.transform.position = new Vector3(10f, 15.5f, 0f);
+                OpponentsCardsInHand -= 1;
                 Destroy(button.gameObject);
             });
         }
@@ -187,6 +197,7 @@ public class TurnSystem : MonoBehaviour
             button.onClick.AddListener(() =>
             {
                 card.transform.position = new Vector3(40f, 15.5f, 0f);
+                OpponentsCardsInHand -= 1;
                 Destroy(button.gameObject);
             });
         }

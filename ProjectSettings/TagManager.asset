@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: PlayerBoard
+    uniqueID: 262821981
+    locked: 0
+  - name: Monkeys
+    uniqueID: 3994175117
+    locked: 0
