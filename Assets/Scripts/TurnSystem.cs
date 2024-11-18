@@ -40,7 +40,9 @@ public class TurnSystem : MonoBehaviour
         OpponentsCardsInHand = 0;
         YourCardsOnBoard = 0;
         OpponentCardsOnBoard = 0;
-}
+        YouDrawCard(YourCardsInHand);
+        YourCardsInHand += 1;
+    }
 
     void Update()
     {
@@ -69,8 +71,8 @@ public class TurnSystem : MonoBehaviour
 
         OpponentCurrentMana = maxMana;
 
-        YouDrawCard(YourCardsInHand);
-        YourCardsInHand += 1;
+        OpponentDrawCard(OpponentsCardsInHand);
+        OpponentsCardsInHand += 1;
     }
 
     public void EndOpponentTurn()
@@ -87,8 +89,9 @@ public class TurnSystem : MonoBehaviour
         maxMana += 1;
         YourCurrentMana = maxMana;
 
-        OpponentDrawCard(OpponentsCardsInHand);
-        OpponentsCardsInHand += 1;
+
+        YouDrawCard(YourCardsInHand);
+        YourCardsInHand += 1;
     }
 
     public void YouDrawCard(int InHand)
