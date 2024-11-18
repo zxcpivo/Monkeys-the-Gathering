@@ -1710,12 +1710,28 @@ PrefabInstance:
       objectReference: {fileID: 2841434196697019207}
     - target: {fileID: 9040112800035464216, guid: 490e0e50d3af3a5449fccb1e2643b9da, type: 3}
       propertyPath: CardDeck.Array.size
-      value: 3
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9040112800035464216, guid: 490e0e50d3af3a5449fccb1e2643b9da, type: 3}
       propertyPath: CardDeck.Array.data[3]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1062558474489597475, guid: 860a39e7b76c1458f84f99714cc71eb4, type: 3}
+    - target: {fileID: 9040112800035464216, guid: 490e0e50d3af3a5449fccb1e2643b9da, type: 3}
+      propertyPath: CardDeck.Array.data[4]
+      value: 
+      objectReference: {fileID: 9194171320276422764, guid: b152ce4107b5b4bbeb9c621ec1a41dff, type: 3}
+    - target: {fileID: 9040112800035464216, guid: 490e0e50d3af3a5449fccb1e2643b9da, type: 3}
+      propertyPath: CardDeck.Array.data[5]
+      value: 
+      objectReference: {fileID: 1623655365050009274, guid: 7def7fb30bb9c4555bba64a617e691f8, type: 3}
+    - target: {fileID: 9040112800035464216, guid: 490e0e50d3af3a5449fccb1e2643b9da, type: 3}
+      propertyPath: CardDeck.Array.data[6]
+      value: 
+      objectReference: {fileID: 7715012036507209435, guid: 8a5730c5038ff4b4eaa344880c17234a, type: 3}
+    - target: {fileID: 9040112800035464216, guid: 490e0e50d3af3a5449fccb1e2643b9da, type: 3}
+      propertyPath: CardDeck.Array.data[7]
+      value: 
+      objectReference: {fileID: 8338011082900486621, guid: 66fb6d59feadf4a709ae3ab5d544c019, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
