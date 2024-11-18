@@ -40,13 +40,11 @@ public class TurnSystem : MonoBehaviour
         {
             turnText.text = "Your Turn";
             manaText.text = YourCurrentMana + "/" + maxMana;
-            print(maxMana);
         }
         else
         {
             turnText.text = "Opponent Turn";
             manaText.text = OpponentCurrentMana + "/" + maxMana;
-            print(maxMana);
         }
 
 
@@ -56,7 +54,7 @@ public class TurnSystem : MonoBehaviour
     {
         if (!isYourTurn) 
         {
-            Console.WriteLine("cant end your turn because its the opponents turn");
+            print("cant end your turn because its the opponents turn");
             return;
         }
 
@@ -73,7 +71,7 @@ public class TurnSystem : MonoBehaviour
     {
         if (isYourTurn)
         {
-            Console.WriteLine(" opponent cant end the turn because its your turn");
+            print(" opponent cant end the turn because its your turn");
             return;
         }
 
