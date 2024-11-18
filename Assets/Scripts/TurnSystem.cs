@@ -40,8 +40,12 @@ public class TurnSystem : MonoBehaviour
         OpponentsCardsInHand = 0;
         YourCardsOnBoard = 0;
         OpponentCardsOnBoard = 0;
-        YouDrawCard(YourCardsInHand);
+
+        YouDrawCard(YourCardsInHand); // Both Players start with 1 card
         YourCardsInHand += 1;
+
+        OpponentDrawCard(OpponentsCardsInHand);
+        OpponentsCardsInHand += 1;
     }
 
     void Update()
