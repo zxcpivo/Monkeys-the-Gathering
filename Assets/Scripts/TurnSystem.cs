@@ -18,9 +18,9 @@ public class TurnSystem : MonoBehaviour
     public bool YourPos2;
     public bool YourPos3;
 
-    public bool OpponentPost1;
-    public bool OpponentPost2;
-    public bool OpponentPost3;
+    public bool OpponentPos1;
+    public bool OpponentPos2;
+    public bool OpponentPos3;
 
     public Text turnText;
     public Text manaText;
@@ -166,7 +166,7 @@ public class TurnSystem : MonoBehaviour
 
             button.onClick.AddListener(() =>
             {
-                YourPos1 = true;
+                YourPos2 = true;
                 YourCardsInHand -= 1;
                 Button Pos1Button = Instantiate(locationCard, new Vector3(-170f, -220f, 0f), Quaternion.identity);
                 Pos1Button.transform.SetParent(canvas.transform, false);
@@ -210,7 +210,7 @@ public class TurnSystem : MonoBehaviour
 
             button.onClick.AddListener(() =>
             {
-                YourPos1 = true;
+                YourPos3 = true;
                 YourCardsInHand -= 1;
                 Button Pos1Button = Instantiate(locationCard, new Vector3(-170f, -220f, 0f), Quaternion.identity);
                 Pos1Button.transform.SetParent(canvas.transform, false);
@@ -254,6 +254,7 @@ public class TurnSystem : MonoBehaviour
         int RandomIndex = UnityEngine.Random.Range(0, CardDeck.Length);
         if (InHand == 0)
         {
+            OpponentPos1 = true;
             cardSpawnPoint.position = new Vector3(-10f, 47f, 0f);
             GameObject card = Instantiate(CardDeck[RandomIndex], cardSpawnPoint.position, Quaternion.identity);
 
@@ -298,6 +299,7 @@ public class TurnSystem : MonoBehaviour
         }
         else if (InHand == 1)
         {
+            OpponentPos2 = true;
             cardSpawnPoint.position = new Vector3(15f, 47f, 0f);
             GameObject card = Instantiate(CardDeck[RandomIndex], cardSpawnPoint.position, Quaternion.identity);
 
@@ -341,6 +343,7 @@ public class TurnSystem : MonoBehaviour
         }
         else if (InHand == 2)
         {
+            OpponentPos3 = true;
             cardSpawnPoint.position = new Vector3(40f, 47f, 0f);
             GameObject card = Instantiate(CardDeck[RandomIndex], cardSpawnPoint.position, Quaternion.identity);
 
