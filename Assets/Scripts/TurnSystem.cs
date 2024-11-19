@@ -14,9 +14,18 @@ public class TurnSystem : MonoBehaviour
     public int YourCardsOnBoard;
     public int OpponentCardsOnBoard;
 
+    public bool YourPos1;
+    public bool YourPos2;
+    public bool YourPos3;
+
+    public bool OpponentPost1;
+    public bool OpponentPost2;
+    public bool OpponentPost3;
+
     public Text turnText;
     public Text manaText;
     public Button playCard;
+    public Button locationCard;
     public Canvas canvas;
 
     public int maxMana;
@@ -36,20 +45,20 @@ public class TurnSystem : MonoBehaviour
         YourCurrentMana = 1;
         OpponentCurrentMana = 1;
 
-        YourCardsInHand = 0;
-        OpponentsCardsInHand = 0;
         YourCardsOnBoard = 0;
         OpponentCardsOnBoard = 0;
 
         YouDrawCard(YourCardsInHand); // Both Players start with 1 card
-        YourCardsInHand += 1;
+        YourCardsInHand = 1;
 
         OpponentDrawCard(OpponentsCardsInHand);
-        OpponentsCardsInHand += 1;
+        OpponentsCardsInHand = 1;
     }
 
     void Update()
     {
+        print($"You have {YourCardsInHand}");
+        print($"Opponent has {OpponentsCardsInHand}");
         if (isYourTurn == true)
         {
             turnText.text = "Your Turn";
@@ -112,10 +121,38 @@ public class TurnSystem : MonoBehaviour
 
             button.onClick.AddListener(() =>
             {
-                card.transform.position = new Vector3(-20f, -15.5f, 0f);
+                YourPos1 = true;
                 YourCardsInHand -= 1;
+                Button Pos1Button = Instantiate(locationCard, new Vector3(-170f, -220f, 0f), Quaternion.identity);
+                Pos1Button.transform.SetParent(canvas.transform, false);
+                Button Pos2Button = Instantiate(locationCard, new Vector3(125f, -220f, 0f), Quaternion.identity);
+                Pos2Button.transform.SetParent(canvas.transform, false);
+                Button Pos3Button = Instantiate(locationCard, new Vector3(450f, -220f, 0f), Quaternion.identity);
+                Pos3Button.transform.SetParent(canvas.transform, false);
+                Pos1Button.onClick.AddListener(() =>
+                {
+                    card.transform.position = new Vector3(-20f, -15.5f, 0f);
+                    Destroy(Pos1Button.gameObject);
+                    Destroy(Pos2Button.gameObject);
+                    Destroy(Pos3Button.gameObject);
+                });
+                Pos2Button.onClick.AddListener(() =>
+                {
+                    card.transform.position = new Vector3(16f, -15.5f, 0f);
+                    Destroy(Pos1Button.gameObject);
+                    Destroy(Pos2Button.gameObject);
+                    Destroy(Pos3Button.gameObject);
+                });
+                Pos3Button.onClick.AddListener(() =>
+                {
+                    card.transform.position = new Vector3(50f, -15.5f, 0f);
+                    Destroy(Pos1Button.gameObject);
+                    Destroy(Pos2Button.gameObject);
+                    Destroy(Pos3Button.gameObject);
+                });
                 Destroy(button.gameObject);
             });
+
         }
         else if (InHand == 1)
         {
@@ -126,10 +163,38 @@ public class TurnSystem : MonoBehaviour
             Button button = Instantiate(playCard, buttonOffset, Quaternion.identity);
             button.transform.SetParent(canvas.transform, false);
 
+
             button.onClick.AddListener(() =>
             {
-                card.transform.position = new Vector3(10f, -15.5f, 0f);
+                YourPos1 = true;
                 YourCardsInHand -= 1;
+                Button Pos1Button = Instantiate(locationCard, new Vector3(-170f, -220f, 0f), Quaternion.identity);
+                Pos1Button.transform.SetParent(canvas.transform, false);
+                Button Pos2Button = Instantiate(locationCard, new Vector3(125f, -220f, 0f), Quaternion.identity);
+                Pos2Button.transform.SetParent(canvas.transform, false);
+                Button Pos3Button = Instantiate(locationCard, new Vector3(450f, -220f, 0f), Quaternion.identity);
+                Pos3Button.transform.SetParent(canvas.transform, false);
+                Pos1Button.onClick.AddListener(() =>
+                {
+                    card.transform.position = new Vector3(-20f, -15.5f, 0f);
+                    Destroy(Pos1Button.gameObject);
+                    Destroy(Pos2Button.gameObject);
+                    Destroy(Pos3Button.gameObject);
+                });
+                Pos2Button.onClick.AddListener(() =>
+                {
+                    card.transform.position = new Vector3(16f, -15.5f, 0f);
+                    Destroy(Pos1Button.gameObject);
+                    Destroy(Pos2Button.gameObject);
+                    Destroy(Pos3Button.gameObject);
+                });
+                Pos3Button.onClick.AddListener(() =>
+                {
+                    card.transform.position = new Vector3(50f, -15.5f, 0f);
+                    Destroy(Pos1Button.gameObject);
+                    Destroy(Pos2Button.gameObject);
+                    Destroy(Pos3Button.gameObject);
+                });
                 Destroy(button.gameObject);
             });
         }
@@ -142,10 +207,38 @@ public class TurnSystem : MonoBehaviour
             Button button = Instantiate(playCard, buttonOffset, Quaternion.identity);
             button.transform.SetParent(canvas.transform, false);
 
+
             button.onClick.AddListener(() =>
             {
-                card.transform.position = new Vector3(40f, -15.5f, 0f);
+                YourPos1 = true;
                 YourCardsInHand -= 1;
+                Button Pos1Button = Instantiate(locationCard, new Vector3(-170f, -220f, 0f), Quaternion.identity);
+                Pos1Button.transform.SetParent(canvas.transform, false);
+                Button Pos2Button = Instantiate(locationCard, new Vector3(125f, -220f, 0f), Quaternion.identity);
+                Pos2Button.transform.SetParent(canvas.transform, false);
+                Button Pos3Button = Instantiate(locationCard, new Vector3(450f, -220f, 0f), Quaternion.identity);
+                Pos3Button.transform.SetParent(canvas.transform, false);
+                Pos1Button.onClick.AddListener(() =>
+                {
+                    card.transform.position = new Vector3(-20f, -15.5f, 0f);
+                    Destroy(Pos1Button.gameObject);
+                    Destroy(Pos2Button.gameObject);
+                    Destroy(Pos3Button.gameObject);
+                });
+                Pos2Button.onClick.AddListener(() =>
+                {
+                    card.transform.position = new Vector3(16f, -15.5f, 0f);
+                    Destroy(Pos1Button.gameObject);
+                    Destroy(Pos2Button.gameObject);
+                    Destroy(Pos3Button.gameObject);
+                });
+                Pos3Button.onClick.AddListener(() =>
+                {
+                    card.transform.position = new Vector3(50f, -15.5f, 0f);
+                    Destroy(Pos1Button.gameObject);
+                    Destroy(Pos2Button.gameObject);
+                    Destroy(Pos3Button.gameObject);
+                });
                 Destroy(button.gameObject);
             });
         }
@@ -168,11 +261,38 @@ public class TurnSystem : MonoBehaviour
             Button button = Instantiate(playCard, buttonOffset, Quaternion.identity);
             button.transform.SetParent(canvas.transform, false);
 
+
             button.onClick.AddListener(() =>
             {
-                card.transform.position = new Vector3(-20f, 15.5f, 0f);
-                YourCardsOnBoard += 1;
+                YourPos1 = true;
                 OpponentsCardsInHand -= 1;
+                Button Pos1Button = Instantiate(locationCard, new Vector3(-170f, 40f, 0f), Quaternion.identity);
+                Pos1Button.transform.SetParent(canvas.transform, false);
+                Button Pos2Button = Instantiate(locationCard, new Vector3(125f, 40f, 0f), Quaternion.identity);
+                Pos2Button.transform.SetParent(canvas.transform, false);
+                Button Pos3Button = Instantiate(locationCard, new Vector3(450f, 40f, 0f), Quaternion.identity);
+                Pos3Button.transform.SetParent(canvas.transform, false);
+                Pos1Button.onClick.AddListener(() =>
+                {
+                    card.transform.position = new Vector3(-20f, 15.5f, 0f);
+                    Destroy(Pos1Button.gameObject);
+                    Destroy(Pos2Button.gameObject);
+                    Destroy(Pos3Button.gameObject);
+                });
+                Pos2Button.onClick.AddListener(() =>
+                {
+                    card.transform.position = new Vector3(16f, 15.5f, 0f);
+                    Destroy(Pos1Button.gameObject);
+                    Destroy(Pos2Button.gameObject);
+                    Destroy(Pos3Button.gameObject);
+                });
+                Pos3Button.onClick.AddListener(() =>
+                {
+                    card.transform.position = new Vector3(50f, 15.5f, 0f);
+                    Destroy(Pos1Button.gameObject);
+                    Destroy(Pos2Button.gameObject);
+                    Destroy(Pos3Button.gameObject);
+                });
                 Destroy(button.gameObject);
             });
         }
@@ -187,8 +307,35 @@ public class TurnSystem : MonoBehaviour
 
             button.onClick.AddListener(() =>
             {
-                card.transform.position = new Vector3(10f, 15.5f, 0f);
+                YourPos1 = true;
                 OpponentsCardsInHand -= 1;
+                Button Pos1Button = Instantiate(locationCard, new Vector3(-170f, 40f, 0f), Quaternion.identity);
+                Pos1Button.transform.SetParent(canvas.transform, false);
+                Button Pos2Button = Instantiate(locationCard, new Vector3(125f, 40f, 0f), Quaternion.identity);
+                Pos2Button.transform.SetParent(canvas.transform, false);
+                Button Pos3Button = Instantiate(locationCard, new Vector3(450f, 40f, 0f), Quaternion.identity);
+                Pos3Button.transform.SetParent(canvas.transform, false);
+                Pos1Button.onClick.AddListener(() =>
+                {
+                    card.transform.position = new Vector3(-20f, 15.5f, 0f);
+                    Destroy(Pos1Button.gameObject);
+                    Destroy(Pos2Button.gameObject);
+                    Destroy(Pos3Button.gameObject);
+                });
+                Pos2Button.onClick.AddListener(() =>
+                {
+                    card.transform.position = new Vector3(16f, 15.5f, 0f);
+                    Destroy(Pos1Button.gameObject);
+                    Destroy(Pos2Button.gameObject);
+                    Destroy(Pos3Button.gameObject);
+                });
+                Pos3Button.onClick.AddListener(() =>
+                {
+                    card.transform.position = new Vector3(50f, 15.5f, 0f);
+                    Destroy(Pos1Button.gameObject);
+                    Destroy(Pos2Button.gameObject);
+                    Destroy(Pos3Button.gameObject);
+                });
                 Destroy(button.gameObject);
             });
         }
@@ -203,8 +350,35 @@ public class TurnSystem : MonoBehaviour
 
             button.onClick.AddListener(() =>
             {
-                card.transform.position = new Vector3(40f, 15.5f, 0f);
+                YourPos1 = true;
                 OpponentsCardsInHand -= 1;
+                Button Pos1Button = Instantiate(locationCard, new Vector3(-170f, 40f, 0f), Quaternion.identity);
+                Pos1Button.transform.SetParent(canvas.transform, false);
+                Button Pos2Button = Instantiate(locationCard, new Vector3(125f, 40f, 0f), Quaternion.identity);
+                Pos2Button.transform.SetParent(canvas.transform, false);
+                Button Pos3Button = Instantiate(locationCard, new Vector3(450f, 40f, 0f), Quaternion.identity);
+                Pos3Button.transform.SetParent(canvas.transform, false);
+                Pos1Button.onClick.AddListener(() =>
+                {
+                    card.transform.position = new Vector3(-20f, 15.5f, 0f);
+                    Destroy(Pos1Button.gameObject);
+                    Destroy(Pos2Button.gameObject);
+                    Destroy(Pos3Button.gameObject);
+                });
+                Pos2Button.onClick.AddListener(() =>
+                {
+                    card.transform.position = new Vector3(16f, 15.5f, 0f);
+                    Destroy(Pos1Button.gameObject);
+                    Destroy(Pos2Button.gameObject);
+                    Destroy(Pos3Button.gameObject);
+                });
+                Pos3Button.onClick.AddListener(() =>
+                {
+                    card.transform.position = new Vector3(50f, 15.5f, 0f);
+                    Destroy(Pos1Button.gameObject);
+                    Destroy(Pos2Button.gameObject);
+                    Destroy(Pos3Button.gameObject);
+                });
                 Destroy(button.gameObject);
             });
         }
