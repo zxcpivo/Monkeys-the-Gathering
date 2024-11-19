@@ -1438,6 +1438,18 @@ PrefabInstance:
       propertyPath: cardSpawnPoint
       value: 
       objectReference: {fileID: 2841434196697019207}
+    - target: {fileID: 9040112800035464216, guid: 490e0e50d3af3a5449fccb1e2643b9da, type: 3}
+      propertyPath: CardDeck.Array.data[4]
+      value: 
+      objectReference: {fileID: 7237957563133305779, guid: fd698c973a2894f79ab5615fc2b149d2, type: 3}
+    - target: {fileID: 9040112800035464216, guid: 490e0e50d3af3a5449fccb1e2643b9da, type: 3}
+      propertyPath: CardDeck.Array.data[5]
+      value: 
+      objectReference: {fileID: 7548592186441520351, guid: 8eb97a2088e25486da87749839735f83, type: 3}
+    - target: {fileID: 9040112800035464216, guid: 490e0e50d3af3a5449fccb1e2643b9da, type: 3}
+      propertyPath: CardDeck.Array.data[6]
+      value: 
+      objectReference: {fileID: 5529527243027436838, guid: e124a41fc27934754b347aa26653f27a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
