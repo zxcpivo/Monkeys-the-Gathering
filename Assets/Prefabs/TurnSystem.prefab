@@ -51,6 +51,7 @@ MonoBehaviour:
   OpponentTurn: 0
   turnText: {fileID: 0}
   manaText: {fileID: 0}
+  attackButton: {fileID: 0}
   maxMana: 0
   YourCurrentMana: 0
   OpponentCurrentMana: 0
@@ -58,4 +59,9 @@ MonoBehaviour:
   - {fileID: 1574810996042986881, guid: ddd951a82087d804e80f526a4bd8c376, type: 3}
   - {fileID: 3836601029837280897, guid: b9694e9991b00bf49bb7bf9ca39596f1, type: 3}
   - {fileID: 3673664310893681973, guid: 88d697a25eb06b24d80e426a62fb2420, type: 3}
+  - {fileID: 1062558474489597475, guid: 860a39e7b76c1458f84f99714cc71eb4, type: 3}
+  - {fileID: 9194171320276422764, guid: b152ce4107b5b4bbeb9c621ec1a41dff, type: 3}
+  - {fileID: 1623655365050009274, guid: 7def7fb30bb9c4555bba64a617e691f8, type: 3}
+  - {fileID: 7715012036507209435, guid: 8a5730c5038ff4b4eaa344880c17234a, type: 3}
+  - {fileID: 8338011082900486621, guid: 66fb6d59feadf4a709ae3ab5d544c019, type: 3}
   cardSpawnPoint: {fileID: 0}

@@ -6,7 +6,7 @@ public class IceMonkey : BasePrimaryCard
 {
     public int FreezeTime;
 
-    public IceMonkey(TurnSystem turnScript, string name, int attack, int health, int cost, int freezeTime) : base(turnScript, name, attack, health, cost)
+    public IceMonkey(string name, int attack, int health, int cost, int freezeTime) : base(name, attack, health, cost)
     {
         this.FreezeTime = freezeTime;
     }

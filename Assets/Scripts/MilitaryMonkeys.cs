@@ -21,7 +21,6 @@ public abstract class BaseMilitaryCard : MonoBehaviour
         this.DecreaseDamage = decrease;
     }
 
-
     public abstract void ActivateEffect();
 }
 
