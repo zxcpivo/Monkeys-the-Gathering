@@ -5,6 +5,7 @@ using UnityEngine;
 public class SniperMonkey : BaseMilitaryCard
 {
     public TurnSystem turnScript;
+    public BattleSystem battleScript;
 
     public SniperMonkey(string name, int attack, int health, int cost, int decrease) : base(name, attack, health, cost, decrease)
     {
@@ -19,5 +20,7 @@ public class SniperMonkey : BaseMilitaryCard
             turnScript.YourCurrentMana -= ManaCost;
         else
             turnScript.OpponentCurrentMana -= ManaCost;
+
+        //battleScript.Attack(this, )
     }
 }

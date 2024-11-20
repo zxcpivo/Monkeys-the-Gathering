@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class BattleSystem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public TurnSystem turnScript;
+
+    public void SpawnAttackButton(Vector3 ButtonPos)
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Attack(GameObject attacker, GameObject defender)
     {
-        
+
     }
 }
