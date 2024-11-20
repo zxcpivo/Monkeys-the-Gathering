@@ -49,10 +49,21 @@ MonoBehaviour:
   OpponentsCardsInHand: 0
   YourTurn: 0
   OpponentTurn: 0
+  YourCardsOnBoard: 0
+  OpponentCardsOnBoard: 0
+  YourPos1: 0
+  YourPos2: 0
+  YourPos3: 0
+  OpponentPos1: 0
+  OpponentPos2: 0
+  OpponentPos3: 0
   turnText: {fileID: 0}
   manaText: {fileID: 0}
-  attackButton: {fileID: 0}
-  maxMana: 0
+  playCard: {fileID: 0}
+  locationCard: {fileID: 0}
+  canvas: {fileID: 0}
+  yourMaxMana: 0
+  opponentMaxMana: 0
   YourCurrentMana: 0
   OpponentCurrentMana: 0
   CardDeck:
@@ -60,8 +71,9 @@ MonoBehaviour:
   - {fileID: 3836601029837280897, guid: b9694e9991b00bf49bb7bf9ca39596f1, type: 3}
   - {fileID: 3673664310893681973, guid: 88d697a25eb06b24d80e426a62fb2420, type: 3}
   - {fileID: 1062558474489597475, guid: 860a39e7b76c1458f84f99714cc71eb4, type: 3}
-  - {fileID: 9194171320276422764, guid: b152ce4107b5b4bbeb9c621ec1a41dff, type: 3}
-  - {fileID: 1623655365050009274, guid: 7def7fb30bb9c4555bba64a617e691f8, type: 3}
-  - {fileID: 7715012036507209435, guid: 8a5730c5038ff4b4eaa344880c17234a, type: 3}
+  - {fileID: 7237957563133305779, guid: fd698c973a2894f79ab5615fc2b149d2, type: 3}
+  - {fileID: 7548592186441520351, guid: 8eb97a2088e25486da87749839735f83, type: 3}
+  - {fileID: 5529527243027436838, guid: e124a41fc27934754b347aa26653f27a, type: 3}
   - {fileID: 8338011082900486621, guid: 66fb6d59feadf4a709ae3ab5d544c019, type: 3}
   cardSpawnPoint: {fileID: 0}
+  battleScript: {fileID: 0}

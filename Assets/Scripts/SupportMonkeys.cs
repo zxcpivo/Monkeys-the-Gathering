@@ -2,19 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class BaseSupportCard : MonoBehaviour
+public abstract class BaseSupportCard : BaseMonkey
 {
-    public string CardName;
-    public int Attack;
-    public int Health;
     public int ManaCost;
     public Sprite CardImage;
     
-    public BaseSupportCard(string name, int attack, int health, int cost)
+    public BaseSupportCard(string name, int attack, int health, int cost) : base(name, attack, health)
     {
-        this.CardName = name;
-        this.Attack = attack;
-        this.Health = health;
         this.ManaCost = cost;
     }
 

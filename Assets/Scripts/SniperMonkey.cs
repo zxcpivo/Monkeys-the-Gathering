@@ -5,7 +5,6 @@ using UnityEngine;
 public class SniperMonkey : BaseMilitaryCard
 {
     public TurnSystem turnScript;
-    public BattleSystem battleScript;
 
     public SniperMonkey(string name, int attack, int health, int cost, int decrease) : base(name, attack, health, cost, decrease)
     {
@@ -13,7 +12,7 @@ public class SniperMonkey : BaseMilitaryCard
     }
 
 
-    public override void ActivateEffect()
+    public override void ActivateAttack()
     {
         print($"{CardName} effect activated");
         if(turnScript.isYourTurn)
@@ -21,6 +20,5 @@ public class SniperMonkey : BaseMilitaryCard
         else
             turnScript.OpponentCurrentMana -= ManaCost;
 
-        //battleScript.Attack(this, )
     }
 }

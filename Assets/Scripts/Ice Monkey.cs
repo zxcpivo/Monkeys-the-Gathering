@@ -20,9 +20,6 @@ public class IceMonkey : BasePrimaryCard
         else
             turnScript.OpponentCurrentMana -= ManaCost;
 
-
-        if (turnScript.isYourTurn)
-            turnScript.OpponentCurrentMana -= ManaDamage;
     }
 
 }

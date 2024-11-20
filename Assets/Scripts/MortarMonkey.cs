@@ -12,7 +12,7 @@ public class MortarMonkey : BaseMilitaryCard
     }
 
 
-    public override void ActivateEffect()
+    public override void ActivateAttack()
     {
         print($"{CardName} effect activated");
         if (turnScript.isYourTurn)
