@@ -7,13 +7,12 @@ public class MonkeyVillage : BaseSupportCard
     public int AttackBoost;
     public TurnSystem turnScript;
 
-    public MonkeyVillage(string name, int attack, int health, int cost) : base(name, attack, health, cost)
+    public MonkeyVillage(string name, int attack, int health, int cost, int attackboost) : base(name, attack, health, cost)
     {
-        
+        this.AttackBoost = attackboost; 
     }
 
-    // Update is called once per frame
-     public override void ActivateEffect()
+     public override void ActivateEffect()  
     {
         print($"{CardName} effect activated");
         if (turnScript.isYourTurn)
