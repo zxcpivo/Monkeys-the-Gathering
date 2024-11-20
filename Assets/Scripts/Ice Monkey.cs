@@ -5,10 +5,11 @@ using UnityEngine;
 public class IceMonkey : BasePrimaryCard
 {
     public TurnSystem turnScript;
+    public int ManaDamage = 1;
 
-    public IceMonkey(string name, int attack, int health, int cost, int freezeTime) : base(name, attack, health, cost)
+    public IceMonkey(string name, int attack, int health, int cost, int manaDamage) : base(name, attack, health, cost)
     {
-
+        this.ManaDamage = manaDamage;
     }
 
     public override void ActivateEffect()
@@ -18,5 +19,10 @@ public class IceMonkey : BasePrimaryCard
             turnScript.YourCurrentMana -= ManaCost;
         else
             turnScript.OpponentCurrentMana -= ManaCost;
+
+
+        if (turnScript.isYourTurn)
+            turnScript.OpponentCurrentMana -= ManaDamage;
     }
+
 }
