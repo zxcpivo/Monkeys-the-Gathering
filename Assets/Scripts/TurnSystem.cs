@@ -28,7 +28,8 @@ public class TurnSystem : MonoBehaviour
     public Button locationCard;
     public Canvas canvas;
 
-    public int maxMana;
+    public int yourMaxMana;
+    public int opponentMaxMana;
     public int YourCurrentMana;
     public int OpponentCurrentMana;
 
@@ -41,7 +42,8 @@ public class TurnSystem : MonoBehaviour
         YourTurn = 1;
         OpponentTurn = 0;
 
-        maxMana = 1;
+        yourMaxMana = 1;
+        opponentMaxMana = 1;
         YourCurrentMana = 1;
         OpponentCurrentMana = 1;
 
@@ -62,12 +64,12 @@ public class TurnSystem : MonoBehaviour
         if (isYourTurn == true)
         {
             turnText.text = "Your Turn";
-            manaText.text = YourCurrentMana + "/" + maxMana;
+            manaText.text = YourCurrentMana + "/" + yourMaxMana;
         }
         else
         {
             turnText.text = "Opponent Turn";
-            manaText.text = OpponentCurrentMana + "/" + maxMana;
+            manaText.text = OpponentCurrentMana + "/" + opponentMaxMana;
         }
     }
 
@@ -82,7 +84,7 @@ public class TurnSystem : MonoBehaviour
         isYourTurn = false;
         OpponentTurn += 1;
 
-        OpponentCurrentMana = maxMana;
+        OpponentCurrentMana = opponentMaxMana;
 
         OpponentDrawCard(OpponentsCardsInHand);
         OpponentsCardsInHand += 1;
@@ -99,8 +101,8 @@ public class TurnSystem : MonoBehaviour
         isYourTurn = true;
         YourTurn += 1;
 
-        maxMana += 1;
-        YourCurrentMana = maxMana;
+        yourMaxMana += 1;
+        YourCurrentMana = yourMaxMana;
 
 
         YouDrawCard(YourCardsInHand);

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6641599540141580428}
   - component: {fileID: 8683591460986781118}
+  - component: {fileID: -7545118889257277021}
   m_Layer: 0
   m_Name: Monkey Village (1)
   m_TagString: Untagged
@@ -84,3 +85,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-7545118889257277021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5529527243027436838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1822b18b9265a7e4f91f45705a05db65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CardName: Monkey Village
+  Attack: 0
+  Health: 2
+  ManaCost: 3
+  CardImage: {fileID: 21300000, guid: 3e4fc29a8eb40464b9bed1fee7db6f6d, type: 3}
+  AttackBoost: 1
+  turnScript: {fileID: 0}

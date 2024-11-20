@@ -5,19 +5,25 @@ using UnityEngine;
 public class BananaFarm : BaseSupportCard
 {
     public TurnSystem turnScript;
-    public int ManaPerTurn = 1;
+    public int IncreaseMaxMana;
 
-    public BananaFarm(string name, int attack, int health, int cost, int manaPerTurn) : base(name, attack, health, cost)
+    public BananaFarm(string name, int attack, int health, int cost, int increasemaxmana) : base(name, attack, health, cost)
     {
-        this.ManaPerTurn = manaPerTurn;
+        this.IncreaseMaxMana = increasemaxmana;
     }
 
     public override void ActivateEffect()
     {
         print($"{CardName} effect activated");
         if (turnScript.isYourTurn)
+        {
+            turnScript.yourMaxMana += IncreaseMaxMana;
+            turnScript.YourCurrentMana = turnScript.yourMaxMana;
             turnScript.YourCurrentMana -= ManaCost;
+        }
         else
+        {
             turnScript.OpponentCurrentMana -= ManaCost;
+        }
     }
 }
