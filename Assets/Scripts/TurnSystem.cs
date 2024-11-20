@@ -134,8 +134,8 @@ public class TurnSystem : MonoBehaviour
                 Pos1Button.onClick.AddListener(() =>
                 {
                     card.transform.position = new Vector3(-20f, -15.5f, 0f);
-                    Vector3 AttackPos = new Vector3(-170f, 0f, 0f);
-                    battleScript.SpawnAttackButton(AttackPos);
+                    //Vector3 AttackPos = new Vector3(-170f, 0f, 0f);
+                    //battleScript.SpawnAttackButton(AttackPos);
                     Destroy(Pos1Button.gameObject);
                     Destroy(Pos2Button.gameObject);
                     Destroy(Pos3Button.gameObject);
@@ -143,8 +143,8 @@ public class TurnSystem : MonoBehaviour
                 Pos2Button.onClick.AddListener(() =>
                 {
                     card.transform.position = new Vector3(16f, -15.5f, 0f);
-                    Vector3 AttackPos = new Vector3(0f, 0f, 0f);
-                    battleScript.SpawnAttackButton(AttackPos);
+                    //Vector3 AttackPos = new Vector3(0f, 0f, 0f);
+                    //battleScript.SpawnAttackButton(AttackPos);
                     Destroy(Pos1Button.gameObject);
                     Destroy(Pos2Button.gameObject);
                     Destroy(Pos3Button.gameObject);
@@ -152,8 +152,8 @@ public class TurnSystem : MonoBehaviour
                 Pos3Button.onClick.AddListener(() =>
                 {
                     card.transform.position = new Vector3(50f, -15.5f, 0f);
-                    Vector3 AttackPos = new Vector3(170f, 0f, 0f);
-                    battleScript.SpawnAttackButton(AttackPos);
+                    //Vector3 AttackPos = new Vector3(170f, 0f, 0f);
+                    //battleScript.SpawnAttackButton(AttackPos);
                     Destroy(Pos1Button.gameObject);
                     Destroy(Pos2Button.gameObject);
                     Destroy(Pos3Button.gameObject);
