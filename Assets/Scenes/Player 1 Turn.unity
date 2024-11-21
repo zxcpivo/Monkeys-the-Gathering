@@ -694,6 +694,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ninja Monkey
       objectReference: {fileID: 0}
+    - target: {fileID: 5782695937051770797, guid: 860a39e7b76c1458f84f99714cc71eb4, type: 3}
+      propertyPath: turnScript
+      value: 
+      objectReference: {fileID: 3698012227340535757}
     - target: {fileID: 7963853443018849555, guid: 860a39e7b76c1458f84f99714cc71eb4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -159.59456
@@ -737,10 +741,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1062558474489597475, guid: 860a39e7b76c1458f84f99714cc71eb4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1781453246}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860a39e7b76c1458f84f99714cc71eb4, type: 3}
 --- !u!1001 &658097660
 PrefabInstance:
@@ -962,6 +963,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4929831171842423327, guid: fd698c973a2894f79ab5615fc2b149d2, type: 3}
+      propertyPath: turnScript
+      value: 
+      objectReference: {fileID: 3698012227340535757}
     - target: {fileID: 5801303792670155924, guid: fd698c973a2894f79ab5615fc2b149d2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -136.28378
@@ -1009,10 +1014,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7237957563133305779, guid: fd698c973a2894f79ab5615fc2b149d2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1254303184}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd698c973a2894f79ab5615fc2b149d2, type: 3}
 --- !u!1 &1103522744
 GameObject:
@@ -1125,31 +1127,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1254303180 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7237957563133305779, guid: fd698c973a2894f79ab5615fc2b149d2, type: 3}
-  m_PrefabInstance: {fileID: 1102348372}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1254303184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1254303180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20c026147d6094efa9b5fa1c48dba956, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CardName: Wizard Monkey
-  Attack: 1
-  Health: 2
-  Shield: 2
-  ManaCost: 1
-  DecreaseDamage: 2
-  CardImage: {fileID: 21300000, guid: 5fb7f332f1707408c900376635dc1191, type: 3}
-  turnScript: {fileID: 3698012227340535757}
 --- !u!1 &1300787353
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,12 +1151,12 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1300787353}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 15d5d6142c5ce0f4a9892c05daf186d6, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1885,31 +1862,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1780696871}
   m_CullTransparentMesh: 1
---- !u!1 &1781453242 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1062558474489597475, guid: 860a39e7b76c1458f84f99714cc71eb4, type: 3}
-  m_PrefabInstance: {fileID: 530696685}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1781453246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1781453242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cf52c3959d4c4496ba82e500aad6cde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CardName: Ninja Monkey
-  Attack: 2
-  Health: 2
-  Shield: 1
-  ManaCost: 1
-  DecreaseDamage: 1
-  CardImage: {fileID: 21300000, guid: fa95d515da3574a2687414bb10c9e67e, type: 3}
-  turnScript: {fileID: 3698012227340535757}
 --- !u!1 &2107941800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2025,31 +1977,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &2140548540 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8896402543828103785, guid: 777c4188b3f7b4dcc9b7dfadf91538ac, type: 3}
-  m_PrefabInstance: {fileID: 8139903514294825798}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2140548544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2140548540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b3b66adfeb1a4fada4edb911f791aeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CardName: Super Monkey
-  Attack: 2
-  Health: 3
-  Shield: 2
-  ManaCost: 3
-  DecreaseDamage: 1
-  CardImage: {fileID: 21300000, guid: 87905a22c6d0c4080a9d7cb4925a3db1, type: 3}
-  turnScript: {fileID: 3698012227340535757}
 --- !u!1001 &7666607363947366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2797,6 +2724,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2389910967616107416, guid: 777c4188b3f7b4dcc9b7dfadf91538ac, type: 3}
+      propertyPath: turnScript
+      value: 
+      objectReference: {fileID: 3698012227340535757}
     - target: {fileID: 6237861695733117091, guid: 777c4188b3f7b4dcc9b7dfadf91538ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: -150.9
@@ -2844,10 +2775,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8896402543828103785, guid: 777c4188b3f7b4dcc9b7dfadf91538ac, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2140548544}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 777c4188b3f7b4dcc9b7dfadf91538ac, type: 3}
 --- !u!1001 &8746107335028497601
 PrefabInstance:
