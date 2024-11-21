@@ -20,7 +20,7 @@ public class BattleSystem : MonoBehaviour
         {
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
-            if (hit.collider != null)
+            if (hit.collider != null) // detects hit with box collider
             {
                 GameObject target = hit.collider.gameObject;
                 if (target != null)
@@ -35,8 +35,9 @@ public class BattleSystem : MonoBehaviour
     public void SpawnAttackButton(Vector3 ButtonPos, GameObject card)
     {
         Vector3 HealthPos = new Vector3(ButtonPos.x - 90, ButtonPos.y + 100, ButtonPos.z);
-        Image HealthDisp = Instantiate(HealthDisplay, HealthPos, Quaternion.identity);
-        HealthDisp.transform.SetParent(canvas.transform, false);
+        Image healthDisplay = Instantiate(HealthDisplay, HealthPos, Quaternion.identity);
+        healthDisplay.transform.SetParent(canvas.transform, false);
+
         Button attack = Instantiate(attackButton, ButtonPos, Quaternion.identity);
         attack.transform.SetParent(canvas.transform, false);
         attack.onClick.AddListener(() =>
