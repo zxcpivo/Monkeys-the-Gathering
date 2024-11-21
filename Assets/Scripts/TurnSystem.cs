@@ -38,6 +38,9 @@ public class TurnSystem : MonoBehaviour
 
     public BattleSystem battleScript;
 
+    public AudioClip drawCardSound;
+    public AudioSource audioSource;
+
     public void Awake()
     {
         isYourTurn = true;
@@ -88,6 +91,10 @@ public class TurnSystem : MonoBehaviour
 
         OpponentDrawCard(OpponentsCardsInHand);
         OpponentsCardsInHand += 1;
+        if (OpponentsCardsInHand <= 3 && audioSource != null && drawCardSound != null)
+        {
+            audioSource.PlayOneShot(drawCardSound);
+        }
     }
 
     public void EndOpponentTurn()
@@ -107,6 +114,10 @@ public class TurnSystem : MonoBehaviour
 
         YouDrawCard(YourCardsInHand);
         YourCardsInHand += 1;
+        if (YourCardsInHand <= 3 && audioSource != null && drawCardSound != null)
+        {
+            audioSource.PlayOneShot(drawCardSound);
+        }
     }
 
     public void YouDrawCard(int InHand)
