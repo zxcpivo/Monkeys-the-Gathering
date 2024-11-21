@@ -8,6 +8,7 @@ public class BattleSystem : MonoBehaviour
 {
     public TurnSystem turnScript;
     public Button attackButton;
+    public Image HealthDisplay;
     public Canvas canvas;
 
     public GameObject currentAttacker;
@@ -33,6 +34,9 @@ public class BattleSystem : MonoBehaviour
 
     public void SpawnAttackButton(Vector3 ButtonPos, GameObject card)
     {
+        Vector3 HealthPos = new Vector3(ButtonPos.x - 90, ButtonPos.y + 100, ButtonPos.z);
+        Image HealthDisp = Instantiate(HealthDisplay, HealthPos, Quaternion.identity);
+        HealthDisp.transform.SetParent(canvas.transform, false);
         Button attack = Instantiate(attackButton, ButtonPos, Quaternion.identity);
         attack.transform.SetParent(canvas.transform, false);
         attack.onClick.AddListener(() =>
