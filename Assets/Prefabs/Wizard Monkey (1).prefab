@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5801303792670155924}
   - component: {fileID: 7142251650953946082}
   - component: {fileID: -3762088381157088877}
+  - component: {fileID: 4929831171842423327}
   m_Layer: 0
   m_Name: Wizard Monkey (1)
   m_TagString: Untagged
@@ -130,3 +131,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.98, y: 5.86}
   m_EdgeRadius: 0
+--- !u!114 &4929831171842423327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7237957563133305779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20c026147d6094efa9b5fa1c48dba956, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CardName: Wizard Monkey
+  Attack: 1
+  Health: 2
+  Shield: 2
+  ManaCost: 1
+  DecreaseDamage: 2
+  CardImage: {fileID: 21300000, guid: 5fb7f332f1707408c900376635dc1191, type: 3}
+  turnScript: {fileID: 0}
