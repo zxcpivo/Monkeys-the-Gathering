@@ -12,7 +12,7 @@ public class BattleSystem : MonoBehaviour
     public Canvas canvas;
 
     public GameObject currentAttacker;
-    private bool selectingTarget = false;
+    public bool selectingTarget = false;
 
     void Update()
     {
