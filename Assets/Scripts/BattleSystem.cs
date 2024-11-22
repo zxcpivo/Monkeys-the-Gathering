@@ -11,6 +11,8 @@ public class BattleSystem : MonoBehaviour
     public Image HealthDisplay;
     public Canvas canvas;
 
+    public Text healthText; // gleb
+
     public GameObject currentAttacker;
     public bool selectingTarget = false;
 
@@ -34,9 +36,16 @@ public class BattleSystem : MonoBehaviour
 
     public void SpawnAttackButton(Vector3 ButtonPos, GameObject card)
     {
-        Vector3 HealthPos = new Vector3(ButtonPos.x - 90, ButtonPos.y + 100, ButtonPos.z);
-        Image healthDisplay = Instantiate(HealthDisplay, HealthPos, Quaternion.identity);
-        healthDisplay.transform.SetParent(canvas.transform, false);
+        Vector3 HealthPos = new Vector3(ButtonPos.x - 90, ButtonPos.y + 100, ButtonPos.z); // gleb       
+        BaseMonkey cardStats = card.GetComponent<BaseMonkey>(); // gleb
+
+        healthText.text = $"{cardStats.Health}";
+        Text healthTextInstance = Instantiate(healthText, HealthPos, Quaternion.identity);
+
+        healthTextInstance.transform.SetParent(canvas.transform, false); 
+        
+        Image healthDisplay = Instantiate(HealthDisplay, HealthPos, Quaternion.identity); // gleb
+        healthDisplay.transform.SetParent(canvas.transform, false); // gleb
 
         Button attack = Instantiate(attackButton, ButtonPos, Quaternion.identity);
         attack.transform.SetParent(canvas.transform, false);
