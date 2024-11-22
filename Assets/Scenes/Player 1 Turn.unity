@@ -2228,15 +2228,15 @@ PrefabInstance:
     - target: {fileID: 9040112800035464216, guid: 490e0e50d3af3a5449fccb1e2643b9da, type: 3}
       propertyPath: CardDeck.Array.data[3]
       value: 
-      objectReference: {fileID: 1781453242}
+      objectReference: {fileID: 0}
     - target: {fileID: 9040112800035464216, guid: 490e0e50d3af3a5449fccb1e2643b9da, type: 3}
       propertyPath: CardDeck.Array.data[4]
       value: 
-      objectReference: {fileID: 1254303180}
+      objectReference: {fileID: 0}
     - target: {fileID: 9040112800035464216, guid: 490e0e50d3af3a5449fccb1e2643b9da, type: 3}
       propertyPath: CardDeck.Array.data[8]
       value: 
-      objectReference: {fileID: 2140548540}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
