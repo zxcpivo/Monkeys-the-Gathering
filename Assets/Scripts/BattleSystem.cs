@@ -39,8 +39,8 @@ public class BattleSystem : MonoBehaviour
         Vector3 HealthPos = new Vector3(ButtonPos.x - 90, ButtonPos.y + 100, ButtonPos.z); // gleb       
         BaseMonkey cardStats = card.GetComponent<BaseMonkey>(); // gleb
 
-        healthText.text = $"{cardStats.Health}";
-        Text healthTextInstance = Instantiate(healthText, HealthPos, Quaternion.identity);
+        healthText.text = $"{cardStats.Health}"; // gleb
+        Text healthTextInstance = Instantiate(healthText, HealthPos, Quaternion.identity); // glebn
 
         healthTextInstance.transform.SetParent(canvas.transform, false); 
         
