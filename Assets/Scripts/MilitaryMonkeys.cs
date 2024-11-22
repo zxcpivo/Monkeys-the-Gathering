@@ -5,13 +5,12 @@ using UnityEngine;
 
 public abstract class BaseMilitaryCard : BaseMonkey
 {
-    public int ManaCost;
+    
     public int DecreaseDamage;
     public Sprite CardImage;
 
-    public BaseMilitaryCard(string name, int attack, int health, int cost, int decrease) : base(name, attack, health)
+    public BaseMilitaryCard(string name, int attack, int health, int manaCost, int decrease) : base(name, attack, health, manaCost)
     {
-        this.ManaCost = cost;
         this.DecreaseDamage = decrease;
     }
 

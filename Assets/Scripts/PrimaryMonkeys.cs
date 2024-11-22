@@ -5,12 +5,12 @@ using UnityEngine;
 public abstract class BasePrimaryCard : BaseMonkey
 {
 
-    public int ManaCost;
+
     public Sprite CardImage;
 
-    public BasePrimaryCard(string name, int attack, int health, int cost) : base(name, attack, health)
+    public BasePrimaryCard(string name, int attack, int health, int manaCost) : base(name, attack, health, manaCost)
     {
-        this.ManaCost = cost;
+    
     }
 
     public abstract void ActivateEffect();

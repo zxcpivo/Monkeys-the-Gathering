@@ -8,10 +8,13 @@ public class BaseMonkey : MonoBehaviour
     public int Attack;
     public int Health;
 
-    public BaseMonkey(string name, int attack, int health)
+    public int ManaCost;
+
+    public BaseMonkey(string name, int attack, int health, int manaCost)
     {
         this.CardName = name;
         this.Attack = attack;
         this.Health = health;
+        this.ManaCost = manaCost;
     }
 }

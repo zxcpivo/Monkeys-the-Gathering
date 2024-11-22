@@ -68,7 +68,22 @@ public class BattleSystem : MonoBehaviour
         print($"{attacker.name}");
         BaseMonkey attackerStats = attacker.GetComponent<BaseMonkey>();
         BaseMonkey defenderStats = defender.GetComponent<BaseMonkey>();
-        defenderStats.Health -= attackerStats.Attack;
-
+        if (defenderStats.Health <= 0){
+            Destroy(defender);
+        }
+        if(attackerStats.ManaCost < turnScript.YourCurrentMana){
+            if (turnScript.isYourTurn){
+                turnScript.YourCurrentMana -= attackerStats.ManaCost;
+                defenderStats.Health -= attackerStats.Attack;
+            }
+            else
+            {
+                turnScript.OpponentCurrentMana -= attackerStats.ManaCost;
+                defenderStats.Health -= attackerStats.Attack;
+            }
+        }
+        else{
+            print("You cannot proceed with this attack");
+        }
     }
 }
