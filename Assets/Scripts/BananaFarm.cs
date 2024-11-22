@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI; 
 public class BananaFarm : BaseSupportCard
 {
     public TurnSystem turnScript;
     public int IncreaseMaxMana;
+    public Text statusText;  
 
     public BananaFarm(string name, int attack, int health, int cost, int increasemaxmana) : base(name, attack, health, cost)
     {
@@ -14,7 +13,15 @@ public class BananaFarm : BaseSupportCard
 
     public override void ActivateEffect()
     {
-        print($"{CardName} effect activated");
+        string effectMessage = $"{CardName} effect activated";
+
+        print(effectMessage);
+
+        if (statusText != null)
+        {
+            statusText.text = effectMessage; 
+        }
+
         if (turnScript.isYourTurn)
         {
             turnScript.yourMaxMana += IncreaseMaxMana;
