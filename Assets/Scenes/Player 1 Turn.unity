@@ -772,9 +772,17 @@ PrefabInstance:
       value: Ninja Monkey
       objectReference: {fileID: 0}
     - target: {fileID: 5782695937051770797, guid: 860a39e7b76c1458f84f99714cc71eb4, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 525673120}
+    - target: {fileID: 5782695937051770797, guid: 860a39e7b76c1458f84f99714cc71eb4, type: 3}
       propertyPath: turnScript
       value: 
       objectReference: {fileID: 3698012227340535757}
+    - target: {fileID: 5782695937051770797, guid: 860a39e7b76c1458f84f99714cc71eb4, type: 3}
+      propertyPath: HealthDisplayPrefab
+      value: 
+      objectReference: {fileID: 29027912}
     - target: {fileID: 7963853443018849555, guid: 860a39e7b76c1458f84f99714cc71eb4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -159.59456
@@ -1204,6 +1212,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1120950009 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7237957563133305779, guid: fd698c973a2894f79ab5615fc2b149d2, type: 3}
+  m_PrefabInstance: {fileID: 1102348372}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1300787353
 GameObject:
   m_ObjectHideFlags: 0
@@ -1738,7 +1751,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: '1
+
+'
 --- !u!222 &1588437287
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2018,6 +2033,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1780696871}
   m_CullTransparentMesh: 1
+--- !u!1 &1940325636 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8896402543828103785, guid: 777c4188b3f7b4dcc9b7dfadf91538ac, type: 3}
+  m_PrefabInstance: {fileID: 8139903514294825798}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2052866653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1062558474489597475, guid: 860a39e7b76c1458f84f99714cc71eb4, type: 3}
+  m_PrefabInstance: {fileID: 530696685}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2107941800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2228,15 +2253,15 @@ PrefabInstance:
     - target: {fileID: 9040112800035464216, guid: 490e0e50d3af3a5449fccb1e2643b9da, type: 3}
       propertyPath: CardDeck.Array.data[3]
       value: 
-      objectReference: {fileID: 1781453242}
+      objectReference: {fileID: 2052866653}
     - target: {fileID: 9040112800035464216, guid: 490e0e50d3af3a5449fccb1e2643b9da, type: 3}
       propertyPath: CardDeck.Array.data[4]
       value: 
-      objectReference: {fileID: 1254303180}
+      objectReference: {fileID: 1120950009}
     - target: {fileID: 9040112800035464216, guid: 490e0e50d3af3a5449fccb1e2643b9da, type: 3}
       propertyPath: CardDeck.Array.data[8]
       value: 
-      objectReference: {fileID: 2140548540}
+      objectReference: {fileID: 1940325636}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2912,6 +2937,18 @@ PrefabInstance:
       propertyPath: turnScript
       value: 
       objectReference: {fileID: 3698012227340535757}
+    - target: {fileID: 6237861695733117091, guid: 777c4188b3f7b4dcc9b7dfadf91538ac, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6.193
+      objectReference: {fileID: 0}
+    - target: {fileID: 6237861695733117091, guid: 777c4188b3f7b4dcc9b7dfadf91538ac, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6.193
+      objectReference: {fileID: 0}
+    - target: {fileID: 6237861695733117091, guid: 777c4188b3f7b4dcc9b7dfadf91538ac, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6.193
+      objectReference: {fileID: 0}
     - target: {fileID: 6237861695733117091, guid: 777c4188b3f7b4dcc9b7dfadf91538ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: -150.9
