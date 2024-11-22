@@ -898,6 +898,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -1131683025113717145, guid: 8eb97a2088e25486da87749839735f83, type: 3}
+      propertyPath: statusText
+      value: 
+      objectReference: {fileID: 7589661536109846197}
+    - target: {fileID: -1131683025113717145, guid: 8eb97a2088e25486da87749839735f83, type: 3}
       propertyPath: turnScript
       value: 
       objectReference: {fileID: 3698012227340535757}

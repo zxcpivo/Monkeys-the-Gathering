@@ -7,7 +7,6 @@ public class MonkeyVillage : BaseSupportCard
     public int AttackBoost;
     public TurnSystem turnScript;
 
-    // Constructor remains the same
     public MonkeyVillage(string name, int attack, int health, int cost, int attackboost) : base(name, attack, health, cost)
     {
         this.AttackBoost = attackboost;

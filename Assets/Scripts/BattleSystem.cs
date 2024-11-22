@@ -39,8 +39,8 @@ public class BattleSystem : MonoBehaviour
         Vector3 HealthPos = new Vector3(ButtonPos.x - 90, ButtonPos.y + 100, ButtonPos.z); // gleb       
         BaseMonkey cardStats = card.GetComponent<BaseMonkey>(); // gleb
 
-        healthText.text = $"{cardStats.Health}";
-        Text healthTextInstance = Instantiate(healthText, HealthPos, Quaternion.identity);
+        healthText.text = $"{cardStats.Health}"; // gleb
+        Text healthTextInstance = Instantiate(healthText, HealthPos, Quaternion.identity); // glebn
 
         healthTextInstance.transform.SetParent(canvas.transform, false); 
         
@@ -66,24 +66,17 @@ public class BattleSystem : MonoBehaviour
     public void Attack(GameObject attacker, GameObject defender)
     {
         print($"{attacker.name}");
-        BaseMonkey attackerStats = attacker.GetComponent<BaseMonkey>();
+        if (attacker.name == "Banana Farm (1)(Clone)") // aaron
+        {
+            turnScript.yourMaxMana += 1;
+        }
         BaseMonkey defenderStats = defender.GetComponent<BaseMonkey>();
-        if (defenderStats.Health <= 0){
-            Destroy(defender);
-        }
-        if(attackerStats.ManaCost < turnScript.YourCurrentMana){
-            if (turnScript.isYourTurn){
-                turnScript.YourCurrentMana -= attackerStats.ManaCost;
-                defenderStats.Health -= attackerStats.Attack;
-            }
-            else
-            {
-                turnScript.OpponentCurrentMana -= attackerStats.ManaCost;
-                defenderStats.Health -= attackerStats.Attack;
-            }
-        }
-        else{
-            print("You cannot proceed with this attack");
+        BaseMonkey attackerStats = attacker.GetComponent<BaseMonkey>();
+
+        defenderStats.Health -= attackerStats.Attack;
+        if (attacker.name == "Monkey Village (1)(Clone)") // aaron
+        {
+            attackerStats.Attack += 2;
         }
     }
 }
