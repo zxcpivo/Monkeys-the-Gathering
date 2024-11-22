@@ -14,54 +14,49 @@ public class MonkeyVillage : BaseSupportCard
 
     public override void ActivateEffect()
     {
-        print($"{CardName} effect activated");
+    print($"{CardName} effect activated");
 
-        if (turnScript.isYourTurn)
-        {
-            turnScript.YourCurrentMana -= ManaCost;
-        }
-        else
-        {
-            turnScript.OpponentCurrentMana -= ManaCost;
-        }
-
-        BoostMonkeyAttackBasedOnPosition();
+    if (turnScript.isYourTurn)
+    {
+        turnScript.YourCurrentMana -= ManaCost;
+    }
+    else
+    {
+        turnScript.OpponentCurrentMana -= ManaCost;
     }
 
-    private void BoostMonkeyAttackBasedOnPosition()
+    BoostMonkeyAttackBasedOnPosition();
+    }
+
+private void BoostMonkeyAttackBasedOnPosition()
     {
         Vector3 cardScreenPos = Camera.main.WorldToScreenPoint(transform.position);
 
         bool isInTopHalf = cardScreenPos.y > Screen.height / 2;
 
-        Vector3[] targetPositions;
-        if (isInTopHalf)
+        Vector3[] targetPositions = isInTopHalf
+        ? new Vector3[]
         {
-            targetPositions = new Vector3[]
-            {
-                new Vector3(-10f, 47f, 0f),
-                new Vector3(15f, 47f, 0f),
-                new Vector3(40f, 47f, 0f)
-            };
+            new Vector3(-10f, 47f, 0f),
+            new Vector3(15f, 47f, 0f),
+            new Vector3(40f, 47f, 0f)
         }
-        else
+        : new Vector3[]
         {
-            targetPositions = new Vector3[]
-            {
-                new Vector3(-10f, -47f, 0f),
-                new Vector3(15f, -47f, 0f),
-                new Vector3(40f, -47f, 0f)
-            };
-        }
+            new Vector3(-10f, -47f, 0f),
+            new Vector3(15f, -47f, 0f),
+            new Vector3(40f, -47f, 0f)
+        };
 
-        float tolerance = 0.1f; 
+        float tolerance = 0.1f;
 
         foreach (var card in turnScript.CardDeck)
         {
             BaseMonkey baseMonkey = card.GetComponent<BaseMonkey>();
             BaseSupportCard baseSupportCard = card.GetComponent<BaseSupportCard>();
 
-            if (baseMonkey != null && baseSupportCard == null)
+            if (baseMonkey != null && baseSupportCard == null &&
+            card != gameObject && !card.name.Contains("Banana Farm"))
             {
                 Vector3 monkeyPosition = card.transform.position;
 
@@ -71,7 +66,7 @@ public class MonkeyVillage : BaseSupportCard
                     {
                         baseMonkey.Attack += AttackBoost;
                         print($"{baseMonkey.CardName}'s attack increased by {AttackBoost}!");
-                        break; 
+                        break;
                     }
                 }
             }

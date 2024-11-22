@@ -68,14 +68,12 @@ public class BattleSystem : MonoBehaviour
         print($"{attacker.name}");
         BaseMonkey attackerStats = attacker.GetComponent<BaseMonkey>();
         BaseMonkey defenderStats = defender.GetComponent<BaseMonkey>();
+
         if (attacker.name == "Banana Farm (1)(Clone)")
-        {
             turnScript.yourMaxMana += 1;
-        }
+
         if (attacker.name == "Monkey Village (1)(Clone)")
-        {
-            attackerStats.Attack += 2;
-        }
+            defenderStats.Attack += 1;
 
         if (attackerStats.ManaCost <= turnScript.YourCurrentMana)
         {
