@@ -29,6 +29,7 @@ public class BattleSystem : MonoBehaviour
                 {
                     Attack(currentAttacker, target);
                     selectingTarget = false;
+                    
                 }
             }
         }
@@ -54,6 +55,7 @@ public class BattleSystem : MonoBehaviour
             StartTargetSelection(card, attack, healthTextInstance, healthDisplay);
 
         });
+        
 
     }
     public void StartTargetSelection(GameObject attacker, Button attackButton, Text healthTextDisplay, Image HealthDisplay)
@@ -79,21 +81,23 @@ public class BattleSystem : MonoBehaviour
         {
             turnScript.YourCurrentMana -= attackerStats.ManaCost;
             defenderStats.Health -= attackerStats.Attack;
+            turnScript.EndYourTurn();
         }
         else if(turnScript.isYourTurn == false && defenderStats.ManaCost <= turnScript.OpponentCurrentMana)
         {
             turnScript.OpponentCurrentMana -= attackerStats.ManaCost;
             defenderStats.Health -= attackerStats.Attack;
+            turnScript.EndOpponentTurn();
+            
         }
         else
         {
             print("Not Enough Mana");
         }
-   
+
         if (defenderStats.Health <= 0)
         {
             Destroy(defender);
-
         }
     }
 }
