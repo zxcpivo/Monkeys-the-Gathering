@@ -14,6 +14,9 @@ public class BattleSystem : MonoBehaviour
     public Text healthText; // gleb
 
     public GameObject currentAttacker;
+    public Button currentAttackButton;
+    public Image currentHealthDisplay;
+    public Text currentHealthText;
     public bool selectingTarget = false;
 
     void Update()
@@ -51,14 +54,17 @@ public class BattleSystem : MonoBehaviour
         attack.transform.SetParent(canvas.transform, false);
         attack.onClick.AddListener(() =>
         {
-            StartTargetSelection(card);
+            StartTargetSelection(card, attack, healthTextInstance, healthDisplay);
 
         });
 
     }
-    public void StartTargetSelection(GameObject attacker)
+    public void StartTargetSelection(GameObject attacker, Button attackButton, Text healthTextDisplay, Image HealthDisplay)
     {
         currentAttacker = attacker;
+        currentAttackButton = attackButton;
+        currentHealthDisplay = HealthDisplay;
+        currentHealthText = healthTextDisplay;
         selectingTarget = true;
 
     }
@@ -75,27 +81,28 @@ public class BattleSystem : MonoBehaviour
         if (attacker.name == "Monkey Village (1)(Clone)")
             defenderStats.Attack += 1;
 
-        if (attackerStats.ManaCost <= turnScript.YourCurrentMana)
+        if (turnScript.isYourTurn && defenderStats.ManaCost <= turnScript.YourCurrentMana)
         {
-            if (turnScript.isYourTurn)
-            {
-                turnScript.YourCurrentMana -= attackerStats.ManaCost;
-                defenderStats.Health -= attackerStats.Attack;
-                turnScript.isYourTurn = false;
-            }
-            else
-            {
-                turnScript.OpponentCurrentMana -= attackerStats.ManaCost;
-                defenderStats.Health -= attackerStats.Attack;
-            }
+            turnScript.YourCurrentMana -= attackerStats.ManaCost;
+            defenderStats.Health -= attackerStats.Attack;
+        }
+        else if(turnScript.isYourTurn == false && defenderStats.ManaCost <= turnScript.OpponentCurrentMana)
+        {
+            turnScript.OpponentCurrentMana -= attackerStats.ManaCost;
+            defenderStats.Health -= attackerStats.Attack;
         }
         else
         {
-            print("There is not enough mana to perform this attack");
+            print("Not Enough Mana");
         }
+   
         if (defenderStats.Health <= 0)
         {
             Destroy(defender);
+            Destroy(currentAttackButton);
+            Destroy(currentHealthDisplay);
+            Destroy(currentHealthText);
+
         }
     }
 }
