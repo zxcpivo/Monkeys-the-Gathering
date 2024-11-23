@@ -14,9 +14,6 @@ public class BattleSystem : MonoBehaviour
     public Text healthText; // gleb
 
     public GameObject currentAttacker;
-    public Button currentAttackButton;
-    public Image currentHealthDisplay;
-    public Text currentHealthText;
     public bool selectingTarget = false;
 
     void Update()
@@ -62,9 +59,6 @@ public class BattleSystem : MonoBehaviour
     public void StartTargetSelection(GameObject attacker, Button attackButton, Text healthTextDisplay, Image HealthDisplay)
     {
         currentAttacker = attacker;
-        currentAttackButton = attackButton;
-        currentHealthDisplay = HealthDisplay;
-        currentHealthText = healthTextDisplay;
         selectingTarget = true;
 
     }
@@ -99,9 +93,6 @@ public class BattleSystem : MonoBehaviour
         if (defenderStats.Health <= 0)
         {
             Destroy(defender);
-            Destroy(currentAttackButton);
-            Destroy(currentHealthDisplay);
-            Destroy(currentHealthText);
 
         }
     }
