@@ -30,7 +30,6 @@ public class BattleSystem : MonoBehaviour
                 {
                     Attack(currentAttacker, target);
                     selectingTarget = false;
-
                 }
             }
         }
@@ -106,11 +105,26 @@ public class BattleSystem : MonoBehaviour
 
         if (defenderStats.Health <= 0)
         {
-            Destroy(defenderStats.HealthDisplay?.gameObject);
-            Destroy(defenderStats.HealthTextInstance?.gameObject);
-            Destroy(defenderStats.AttackButton?.gameObject);
+            if (defenderStats.HealthDisplay != null)
+                Destroy(defenderStats.HealthDisplay?.gameObject);
+            if (defenderStats.HealthTextInstance != null)
+                Destroy(defenderStats.HealthTextInstance?.gameObject);
+            if (defenderStats.AttackButton != null)
+                Destroy(defenderStats.AttackButton?.gameObject);
+
             Destroy(defender);
-            
+        }
+        else
+        {
+            if (defenderStats.HealthDisplay != null)
+            {
+                Text healthText = defenderStats.HealthDisplay.GetComponentInChildren<Text>();
+                if (healthText != null)
+                {
+                    healthText.text = defenderStats.Health.ToString();
+                }
+                
+            }
             
         }
     }
