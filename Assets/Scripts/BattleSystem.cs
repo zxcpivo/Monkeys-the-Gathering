@@ -40,8 +40,6 @@ public class BattleSystem : MonoBehaviour
         Vector3 HealthPos = new Vector3(ButtonPos.x - 90, ButtonPos.y + 100, ButtonPos.z); // gleb       
         BaseMonkey cardStats = card.GetComponent<BaseMonkey>(); // gleb
 
-        
-
         healthText.text = $"{cardStats.Health}";
         Text healthTextInstance = Instantiate(healthText, HealthPos, Quaternion.identity);
         healthTextInstance.transform.SetParent(canvas.transform, false);
@@ -59,10 +57,6 @@ public class BattleSystem : MonoBehaviour
             StartTargetSelection(card, attack, healthTextInstance, healthDisplay);
 
         });
-        
-
-
-
     }
 
     public void StartTargetSelection(GameObject attacker, Button attackButton, Text healthTextDisplay, Image HealthDisplay)
