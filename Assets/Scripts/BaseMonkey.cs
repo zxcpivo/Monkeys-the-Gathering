@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BaseMonkey : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class BaseMonkey : MonoBehaviour
     public int Health;
 
     public int ManaCost;
+    public Image HealthDisplay;
+    public Text HealthTextInstance;
+    public Button AttackButton;
 
     public BaseMonkey(string name, int attack, int health, int manaCost)
     {

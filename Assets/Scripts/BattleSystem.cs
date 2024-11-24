@@ -10,8 +10,9 @@ public class BattleSystem : MonoBehaviour
     public Button attackButton;
     public Image HealthDisplay;
     public Canvas canvas;
-
+    public BaseMonkey HealthChecker;
     public Text healthText; // gleb
+
 
     public GameObject currentAttacker;
     public bool selectingTarget = false;
@@ -29,7 +30,7 @@ public class BattleSystem : MonoBehaviour
                 {
                     Attack(currentAttacker, target);
                     selectingTarget = false;
-                    
+
                 }
             }
         }
@@ -40,16 +41,20 @@ public class BattleSystem : MonoBehaviour
         Vector3 HealthPos = new Vector3(ButtonPos.x - 90, ButtonPos.y + 100, ButtonPos.z); // gleb       
         BaseMonkey cardStats = card.GetComponent<BaseMonkey>(); // gleb
 
+        
+
         healthText.text = $"{cardStats.Health}";
         Text healthTextInstance = Instantiate(healthText, HealthPos, Quaternion.identity);
-
         healthTextInstance.transform.SetParent(canvas.transform, false);
+        cardStats.HealthTextInstance = healthTextInstance;
 
         Image healthDisplay = Instantiate(HealthDisplay, HealthPos, Quaternion.identity); // gleb
         healthDisplay.transform.SetParent(canvas.transform, false); // gleb
+        cardStats.HealthDisplay = healthDisplay;
 
         Button attack = Instantiate(attackButton, ButtonPos, Quaternion.identity);
         attack.transform.SetParent(canvas.transform, false);
+        cardStats.AttackButton = attack;
         attack.onClick.AddListener(() =>
         {
             StartTargetSelection(card, attack, healthTextInstance, healthDisplay);
@@ -57,9 +62,13 @@ public class BattleSystem : MonoBehaviour
         });
         
 
+
+
     }
+
     public void StartTargetSelection(GameObject attacker, Button attackButton, Text healthTextDisplay, Image HealthDisplay)
     {
+        
         currentAttacker = attacker;
         selectingTarget = true;
 
@@ -97,7 +106,12 @@ public class BattleSystem : MonoBehaviour
 
         if (defenderStats.Health <= 0)
         {
+            Destroy(defenderStats.HealthDisplay?.gameObject);
+            Destroy(defenderStats.HealthTextInstance?.gameObject);
+            Destroy(defenderStats.AttackButton?.gameObject);
             Destroy(defender);
+            
+            
         }
     }
 }
