@@ -16,10 +16,8 @@ public class IceMonkey : BasePrimaryCard
     {
         print($"{CardName} effect activated");
         if (turnScript.isYourTurn)
-            turnScript.YourCurrentMana -= ManaCost;
+            turnScript.YourCurrentMana -= ManaDamage;
         else
-            turnScript.OpponentCurrentMana -= ManaCost;
-
+            turnScript.OpponentCurrentMana -= ManaDamage;
     }
-
 }
