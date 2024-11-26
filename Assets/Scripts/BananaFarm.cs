@@ -30,6 +30,8 @@ public class BananaFarm : BaseSupportCard
         }
         else
         {
+            turnScript.opponentMaxMana += IncreaseMaxMana;
+            turnScript.OpponentCurrentMana = turnScript.opponentMaxMana;
             turnScript.OpponentCurrentMana -= ManaCost;
         }
     }
